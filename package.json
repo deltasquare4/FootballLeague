@@ -1,0 +1,14 @@
+{
+  "name": "FootballLeague",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rakshit Menpara",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table": "^0.3.1"
+  }
+}
