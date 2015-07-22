@@ -9,6 +9,8 @@
   "author": "Rakshit Menpara",
   "license": "MIT",
   "dependencies": {
-    "cli-table": "^0.3.1"
+    "async": "^1.4.0",
+    "cli-table": "^0.3.1",
+    "mongodb": "^2.0.39"
   }
 }

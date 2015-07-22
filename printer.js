@@ -50,3 +50,19 @@ exports.leagueTable = function (teams, date) {
 
   console.log(table.toString());
 };
+
+exports.teams = function (teams) {
+  var table = new Table({
+    head: ['Team', 'Times Played in Premier League since 2000'],
+    colWidths: [20, 45],
+  });
+
+  teams.forEach(function (team) {
+    table.push([
+      team._id,
+      team.count,
+    ]);
+  });
+
+  console.log(table.toString());
+};

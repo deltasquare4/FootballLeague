@@ -32,9 +32,18 @@ module.exports = function (filePath, callback) {
       var halfTime = cols[4].split(DASH);
       var fullTime = cols[3].split(DASH);
 
+      var date = new Date(cols[0]);
+      var season;
+
+      if(date.getMonth() <= 5) {
+        season = (date.getFullYear() - 1) + '-' + date.getFullYear();
+      } else {
+        season = date.getFullYear() + '-' + (date.getFullYear() + 1);
+      }
       // Return parsed, formatted games
       return {
-        date: new Date(cols[0]),
+        season: season,
+        date: date,
         homeTeam: cols[1],
         awayTeam: cols[2],
         score: {
@@ -45,6 +54,7 @@ module.exports = function (filePath, callback) {
           fullTime: {
             home: Number(fullTime[0]),
             away: Number(fullTime[1]),
+            diff: Number(fullTime[0]) - Number(fullTime[1]),
           },
         },
       };
